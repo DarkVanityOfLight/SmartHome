@@ -27,14 +27,14 @@
 
             .sender_form{
                 
-                width: 16%;
+                width: 16rem;
                 
                 }
 
             .nachricht_form{
                 
-                width: 75%;
-                height: 1%;
+                width: 20rem;
+                height: 1rem;
                 
                 }
             
@@ -47,18 +47,18 @@
                     
             .Home_a_left{
             
-                margin-top: 12%;
-                margin-left: 2%;
-                margin-bottom: 12%;
+                margin-top: 1.2rem;
+                margin-left: .2rem;
+                margin-bottom: 1.2rem;
                 
                 }
 	    
 	    
             .Home_a_right{
             
-            margin-top: 12%;
-            margin-right: 2%;
-            margin-bottom: 12%;
+            margin-top: 1.2rem;
+            margin-right: .2rem;
+            margin-bottom: 1.2rem;
             
             
                 }        
@@ -82,22 +82,22 @@
                 
                     </div>
                     
-                    <div style="width:36%">
+                    <div style="width:36rem">
                     
                     </div>
                     
-                    <div class='col-auto' style='width:28%'>
+                    <div class='col-auto' style='width:20rem'>
                         
                         <h1><font color="#86C232">Home Chatt</font></h1>
                         
                     </div>
                     
-                    <div style="width:25%">
+                    <div style="width:36rem">
                     
                     </div>
                     
                     
-                    <div class="col-auto" style="width:4%">
+                    <div class="col-auto" style="width:.4rem">
                         
                         <a href='Chatt' class="btn my_btn Home_a_right">Refresh</a>
                         
@@ -107,11 +107,11 @@
                 
             </div>
 
-            <div id='Chatt' class='container-fluid' style="padding-top:2%; padding:2%">
-                            <div id='Messages' style='background-color:#6B6E70; width:20%;border-radius:1rem'>       
+            <div id='Chatt' class='container-fluid' style="padding-top:2rem;padding-left: 2rem">
+                            <div id='Messages' style='background-color:#6B6E70; width:20rem;border-radius:1rem;'>       
                                 {% for message in messages %}
-                                    <div style="height:4%; margin-left:2%; margin-top:2%; margin-bottom:2%">         
-                                        <p style="margin-top:2%; margin-bottom:1%"><font color="#86C232">{{message.Sender}}:</font> <font color="#FFF">{{message.Nachricht}}</font></p>
+                                    <div style="height:2rem; margin-left:.4rem; margin-bottom:1rem">         
+                                        <p style="margin-top:.1rem"><font color="#86C232">{{message.Sender}}:</font> <font color="#FFF">{{message.Nachricht}}</font></p>
                                     </div>
                                 {% endfor %}
                             </div>
