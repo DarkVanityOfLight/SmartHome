@@ -19,7 +19,7 @@ After=network.target
 
 [Service]
 User=server
-Group=users
+Group=root
 WorkingDirectory=/home/server/SmartHome
 ExecStart=/home/server/.local/share/virtualenvs/SmartHome-EXIvxEz7/bin/gunicorn \
           --access-logfile - \
