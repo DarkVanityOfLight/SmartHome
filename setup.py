@@ -1,3 +1,5 @@
+import os
+
 sock_file = open("/etc/systemd/system/gunicorn.socket")
 sock_content = """[Unit]
 Description=gunicorn socket
@@ -8,7 +10,7 @@ ListenStream=/run/gunicorn.sock
 [Install]
 WantedBy=sockets.target"""
 sock_file.write(sock_content)
-sock_file.flush()
+sock_file.close()
 service_file = open("/etc/systemd/system/gunicorn.service")
 service_content = """[Unit]
 Description=gunicorn daemon
@@ -19,11 +21,16 @@ After=network.target
 User=server
 Group=www-data
 WorkingDirectory=/home/server/SmartHome
-ExecStart=/home/server//myprojectenv/bin/gunicorn \
+ExecStart=/home/server/.local/share/virtualenvs/SmartHome-EXIvxEz7/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
-          myproject.wsgi:application
+          SmartHome.wsgi:application
 
 [Install]
 WantedBy=multi-user.target"""
+service_file.write(service_content)
+service_file.close()
+
+os.system("sudo systemctl start gunicorn.socket && sudo systemctl enable gunicorn.socket")
+
