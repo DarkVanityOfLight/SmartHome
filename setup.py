@@ -1,6 +1,6 @@
 import os
 
-sock_file = open("/etc/systemd/system/gunicorn.socket")
+sock_file = open("/etc/systemd/system/gunicorn.socket", "w+")
 sock_content = """[Unit]
 Description=gunicorn socket
 
@@ -11,7 +11,7 @@ ListenStream=/run/gunicorn.sock
 WantedBy=sockets.target"""
 sock_file.write(sock_content)
 sock_file.close()
-service_file = open("/etc/systemd/system/gunicorn.service")
+service_file = open("/etc/systemd/system/gunicorn.service", "w+")
 service_content = """[Unit]
 Description=gunicorn daemon
 Requires=gunicorn.socket
