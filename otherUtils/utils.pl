@@ -7,6 +7,6 @@ sub restart_ap(){
 }
 
 while (true){
-	sleep(345600)
-	restart_ap()
+	sleep(345600);
+	restart_ap();
 }
