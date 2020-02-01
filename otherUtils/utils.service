@@ -9,4 +9,4 @@ WorkingDirectory=/home/server/SmartHome
 ExecStart=perl /home/server/SmartHome/otherUtils/utils.pl
 
 [Install]
-
+WantedBy = multi-user.target
