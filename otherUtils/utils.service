@@ -1,0 +1,12 @@
+[Unit]
+Description=Util and service stuff
+After=network.target
+
+[Service]
+User=server
+Group=root
+WorkingDirectory=/home/server/SmartHome
+ExecStart=perl /home/server/SmartHome/otherUtils/utils.pl
+
+[Install]
+
