@@ -26,10 +26,24 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('client');
   });
 
-  it('should render title', () => {
+  it('should render header', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('client app is running!');
+    expect(compiled.querySelector('app-header')).not.toBe(null);
+  });
+
+  it('should render router', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('router-outlet')).not.toBe(null);
+  });
+
+  it ('should render footer', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('app-footer')).not.toBe(null)
   });
 });
