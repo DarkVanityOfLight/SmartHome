@@ -4,6 +4,17 @@ import { Injectable, EventEmitter, Output } from '@angular/core';
   providedIn: 'root'
 })
 export class ActivateService {
-  @Output() activated: EventEmitter<boolean> = new EventEmitter();
+  visible = false
+  @Output() open: EventEmitter<any> = new EventEmitter();
+  @Output() close: EventEmitter<any> = new EventEmitter();
   constructor() { }
+
+  toggle(): void{
+    this.visible = !this.visible;
+    if (this.visible){
+      this.open.emit(null);
+    }else{
+      this.close.emit(null);
+    }
+  }
 }
