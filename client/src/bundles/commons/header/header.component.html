@@ -1,14 +1,24 @@
-<div class="header">
-    <div class="link-button-container login-container">
-        <app-link-button [title]="'Login'"></app-link-button>
-    </div>
-    <div class="link-button-container">
-        <app-link-button [title]="'Garage'"></app-link-button>
-    </div>
-    <div class="link-button-container">
-        <app-link-button [title]="'Lueftung'"></app-link-button>
-    </div>
-    <div class="link-button-container last-link-button-container">
-        <app-link-button [title]="'Rollaeden'"></app-link-button>
+<div *ngIf='innerWidth >= 410; else header_mobile'>
+    <div class="header-desktop">
+            <div class="link-button-container login-container">
+                <app-link-button [title]="'Login'"></app-link-button>
+            </div>
+            <div class="link-button-container">
+                <app-link-button [title]="'Garage'"></app-link-button>
+            </div>
+            <div class="link-button-container">
+                <app-link-button [title]="'Bewaesserung'"></app-link-button>
+            </div>
+            <div class="link-button-container last-link-button-container">
+                <app-link-button [title]="'Rollaeden'"></app-link-button>
+            </div>
+            <div class="link-button-container home-container">
+                <app-link-button [title]="'Home'"></app-link-button>
+            </div>
     </div>
 </div>
+<ng-template #header_mobile>
+    <div class="header-mobile">
+        <app-hamburger></app-hamburger>
+    </div>
+</ng-template>

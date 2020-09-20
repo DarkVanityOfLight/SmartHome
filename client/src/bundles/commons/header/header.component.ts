@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event){
+  onResize(event): void{
     this.innerWidth = window.innerWidth;
   }
 }
