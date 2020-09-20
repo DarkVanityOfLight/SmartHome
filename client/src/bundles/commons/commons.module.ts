@@ -15,6 +15,6 @@ import { OverlayComponent } from './overlay/overlay.component';
     CommonModule,
     RouterModule
   ],
-  exports: [HeaderComponent, FooterComponent]
+  exports: [HeaderComponent, FooterComponent, OverlayComponent]
 })
 export class CommonsModule { }
