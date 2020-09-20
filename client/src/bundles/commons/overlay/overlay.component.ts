@@ -7,7 +7,7 @@ import { ActivateService } from 'src/services/activate.service';
   styleUrls: ['./overlay.component.styl']
 })
 export class OverlayComponent implements OnInit {
-  private isHidden: boolean;
+  isHidden: boolean;
 
   constructor(private activator: ActivateService) {
     activator.close.subscribe(this.hide());
