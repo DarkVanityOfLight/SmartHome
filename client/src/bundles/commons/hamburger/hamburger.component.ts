@@ -12,4 +12,8 @@ export class HamburgerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleHamburger(): void{
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.classList.toggle('checked');
+  }
 }

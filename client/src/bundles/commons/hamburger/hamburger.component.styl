@@ -1,0 +1,43 @@
+smokeyBlack = rgba(12, 15, 10, 1)
+white = rgba(239, 249, 240, 1)
+skyBlue = rgba(146, 220, 229, 1)
+marineBlue = rgba(21, 50, 67, 1)
+grey = rgba(49, 62, 80, 1)
+
+.hamburger
+    background-color: marineBlue
+    display: block
+    position: relative 
+    height: 50px
+    width: 74px
+    margin-left: 10px
+    margin-right: auto
+    border-radius: 4px
+    transition: .5s
+
+
+.line
+    position: absolute
+    left: 10px
+    height 4px
+    width: 55px
+    background: skyBlue
+    border-radius: 2px
+    display: block
+    transition: 0.5s
+    transform-origin: center
+
+.line:nth-child(1)
+    top 12px
+.line:nth-child(2)
+    top: 24px
+.line:nth-child(3)
+    top: 36px
+
+
+.hamburger.checked .line:nth-child(1)
+    transform: translateY(12px) rotate(-45deg)
+.hamburger.checked .line:nth-child(2)
+    opacity 0
+.hamburger.checked .line:nth-child(3)
+    transform: translateY(-12px) rotate(45deg)
