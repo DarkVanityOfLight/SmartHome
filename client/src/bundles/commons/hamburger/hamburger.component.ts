@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivateService } from 'src/services/activate.service';
 
 @Component({
   selector: 'app-hamburger',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HamburgerComponent implements OnInit {
   public clicked: boolean;
 
-  constructor() { }
+  constructor(private activatorService: ActivateService) { }
 
   ngOnInit(): void {
     this.clicked = false;
@@ -18,5 +19,6 @@ export class HamburgerComponent implements OnInit {
     const hamburger = document.querySelector('.hamburger');
     hamburger.classList.toggle('checked');
     this.clicked = !this.clicked;
+    this.activatorService.toggle();
   }
 }
