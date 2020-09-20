@@ -13,7 +13,7 @@ export class OverlayComponent implements OnInit {
     activator.close.subscribe(() => {
       this.isHidden = true;
     });
-    activator.open.subscribe(()=>{
+    activator.open.subscribe(() => {
       this.isHidden = false;
     }
     );
