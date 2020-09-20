@@ -10,6 +10,8 @@ export class OverlayComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const burger = document.querySelector('.hamburger');
+    const site = document.querySelector('.app');
   }
 
 }
