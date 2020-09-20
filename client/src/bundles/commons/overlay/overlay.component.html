@@ -1,5 +1,7 @@
 <ng-container *ngIf="!isHidden">
     <div class="overlay">
-        <ng-content></ng-content>
+        <div class="overlay-content">
+            <ng-content></ng-content>
+        </div>
     </div>
 </ng-container>

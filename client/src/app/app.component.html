@@ -2,11 +2,27 @@
     <div class="app-header-container">
         <app-header></app-header>
     </div>
-    <div class="overlay-container">
-        <app-overlay>Foo</app-overlay>
-    </div>
-    <div class="app-router-container">
-        <router-outlet></router-outlet>
+    <div class='content-container'>
+        <app-overlay>
+            <div class="a-container">
+                <a routerLink="">Login</a>
+            </div>
+            <div class="a-container">
+                <a routerLink="">Garage</a>
+            </div>
+            <div class="a-container">
+                <a routerLink="">Bewaesserung</a>
+            </div>
+            <div class="a-container">
+                <a routerLink="">Lueftung</a>
+            </div>
+            <div class="a-container">
+                <a routerLink="">Home</a>
+            </div>
+        </app-overlay>
+        <div class="app-router-container">
+            <router-outlet></router-outlet>
+        </div>
     </div>
     <div class="app-footer-container">
         <app-footer></app-footer>
