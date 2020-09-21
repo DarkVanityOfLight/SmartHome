@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StartComponent } from './start/start.component';
+import { GarageComponent } from './garage/garage.component';
 
 
 
 @NgModule({
-  declarations: [StartComponent],
+  declarations: [StartComponent, GarageComponent],
   imports: [
     CommonModule
   ],
