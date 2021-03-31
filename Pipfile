@@ -13,7 +13,7 @@ gpiozero = "==1.5.1"
 gunicorn = "==20.0.4"
 pytz = "==2019.3"
 sqlparse = "==0.3.0"
-Django = "==3.0.7"
+Django = "==3.0.12"
 
 [requires]
 python_version = "3.7"
